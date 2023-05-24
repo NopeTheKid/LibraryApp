@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.nopearino.libraryapp.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:name="com.nopearino.libraryapp.ui.loan.LoanFragment"
+        android:label="@string/title_loan"
+        tools:layout="@layout/fragment_loan" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.nopearino.libraryapp.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:name="com.nopearino.libraryapp.ui.books.BooksFragment"
+        android:label="@string/title_books"
+        tools:layout="@layout/fragment_books" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.nopearino.libraryapp.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:name="com.nopearino.libraryapp.ui.multimedia.MultimediaFragment"
+        android:label="@string/title_multimedia"
+        tools:layout="@layout/fragment_multimedia" />
 </navigation>

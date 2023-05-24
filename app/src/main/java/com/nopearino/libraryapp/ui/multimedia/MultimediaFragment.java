@@ -1,4 +1,4 @@
-package com.nopearino.libraryapp.ui.notifications;
+package com.nopearino.libraryapp.ui.multimedia;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,18 +10,18 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.nopearino.libraryapp.databinding.FragmentNotificationsBinding;
+import com.nopearino.libraryapp.databinding.FragmentMultimediaBinding;
 
-public class NotificationsFragment extends Fragment {
+public class MultimediaFragment extends Fragment {
 
-    private FragmentNotificationsBinding binding;
+    private FragmentMultimediaBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        NotificationsViewModel notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
+        MultimediaViewModel notificationsViewModel =
+                new ViewModelProvider(this).get(MultimediaViewModel.class);
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentMultimediaBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textNotifications;

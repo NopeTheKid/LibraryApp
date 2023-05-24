@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">LibraryApp</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_loan">Requisitar</string>
+    <string name="title_books">Livros</string>
+    <string name="title_multimedia">Multimédia</string>
+    <string name="homepage">Homepage</string>
+    <string name="book_search_hint">Pesquisar livros</string>
+    <string name="book_title_example">Título</string>
 </resources>

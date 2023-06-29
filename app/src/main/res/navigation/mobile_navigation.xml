@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@id/navigation_home">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -11,11 +11,15 @@
         android:label="@string/title_loan"
         tools:layout="@layout/fragment_loan" />
 
+
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.nopearino.libraryapp.ui.books.BooksFragment"
-        android:label="@string/title_books"
-        tools:layout="@layout/fragment_books" />
+        android:id="@+id/navigation_add_book"
+        android:name="com.nopearino.libraryapp.ui.books.fragment_AddBook"
+        android:label="@string/title_add_book"
+        tools:layout="@layout/fragment__add_book"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
 
     <fragment
         android:id="@+id/navigation_notifications"

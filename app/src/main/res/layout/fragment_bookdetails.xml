@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6FA8DC"
+    tools:context=".fragment_bookdetails">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/TView_BookName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:text="Book Name"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="287dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="196dp"
+        android:layout_height="237dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/book_example"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TView_editora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:text="Editora"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="381dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="categoria"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="478dp" />
+
+    <TextView
+        android:id="@+id/TView_ISBN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="ISBN"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="570dp" />
+
+    <EditText
+        android:id="@+id/EDText_NomeBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="327dp" />
+
+    <EditText
+        android:id="@+id/EDText_editora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Editora"
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="422dp" />
+
+    <EditText
+        android:id="@+id/EDText_Categoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Categoria"
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="518dp" />
+
+    <EditText
+        android:id="@+id/EDText_isbn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="ISBN"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="618dp" />
+
+    <Button
+        android:id="@+id/btn_requisitar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF9900"
+        android:text="Requisitar"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="678dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

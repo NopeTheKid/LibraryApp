@@ -13,10 +13,10 @@ import com.nopearino.libraryapp.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link fragment_AddBook#newInstance} factory method to
+ * Use the {@link AddBookFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class fragment_AddBook extends Fragment {
+public class AddBookFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,7 +28,7 @@ public class fragment_AddBook extends Fragment {
     private String mParam2;
 
 
-    public fragment_AddBook() {
+    public AddBookFragment() {
         // Required empty public constructor
     }
 
@@ -41,8 +41,8 @@ public class fragment_AddBook extends Fragment {
      * @return A new instance of fragment fragment_AddBook.
      */
     // TODO: Rename and change types and number of parameters
-    public static fragment_AddBook newInstance(String param1, String param2) {
-        fragment_AddBook fragment = new fragment_AddBook();
+    public static AddBookFragment newInstance(String param1, String param2) {
+        AddBookFragment fragment = new AddBookFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

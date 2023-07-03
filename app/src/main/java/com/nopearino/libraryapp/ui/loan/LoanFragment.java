@@ -1,7 +1,6 @@
 package com.nopearino.libraryapp.ui.loan;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,14 +9,13 @@ import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.nopearino.libraryapp.MainActivity;
 import com.nopearino.libraryapp.R;
 import com.nopearino.libraryapp.databinding.FragmentLoanBinding;
 import com.nopearino.libraryapp.model.BookModel;
@@ -54,6 +52,7 @@ public class LoanFragment extends Fragment {
     }
 
     private class GidViewAdapter extends ArrayAdapter<BookModel> {
+        private FragmentTransaction ft;
 
         public GidViewAdapter(@NonNull Context context, ArrayList<BookModel> courseModelArrayList) {
             super(context, 0, courseModelArrayList);
@@ -70,15 +69,22 @@ public class LoanFragment extends Fragment {
             }
 
             BookModel book = getItem(position);
-            TextView courseTV = listitemView.findViewById(R.id.book_title);
-            ImageView courseIV = listitemView.findViewById(R.id.book_img);
+            TextView bookTitle = listitemView.findViewById(R.id.book_title);
+            ImageView bookCover = listitemView.findViewById(R.id.book_img);
 
-            courseTV.setText(book.getTitle());
-            courseIV.setImageResource(book.getCover());
+            bookTitle.setText(book.getTitle());
+            bookCover.setImageResource(book.getCover());
             listitemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(getContext(), book.getTitle(), Toast.LENGTH_SHORT).show();
+                    ft = getFragmentManager().beginTransaction();
+                    BookDetailsFragment bookDetailsFragment = new BookDetailsFragment();
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable("book", book);
+                    bookDetailsFragment.setArguments(bundle);
+                    ft.add(R.id.nav_host_fragment_activity_main, bookDetailsFragment, "BookDetails");
+                    ft.addToBackStack("LoanFragment");
+                    ft.commit();
                 }
             });
 

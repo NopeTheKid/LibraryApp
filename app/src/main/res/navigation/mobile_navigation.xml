@@ -14,7 +14,7 @@
 
     <fragment
         android:id="@+id/navigation_add_book"
-        android:name="com.nopearino.libraryapp.ui.books.fragment_AddBook"
+        android:name="com.nopearino.libraryapp.ui.books.AddBookFragment"
         android:label="@string/title_add_book"
         tools:layout="@layout/fragment_add_book"
         android:layout_width="match_parent"
@@ -25,5 +25,11 @@
         android:id="@+id/navigation_notifications"
         android:name="com.nopearino.libraryapp.ui.multimedia.MultimediaFragment"
         android:label="@string/title_multimedia"
+        tools:layout="@layout/fragment_multimedia" />
+
+    <fragment
+        android:id="@+id/book_loan"
+        android:name="com.nopearino.libraryapp.ui.loan.BookDetailsFragment"
+        android:label="Book Details"
         tools:layout="@layout/fragment_multimedia" />
 </navigation>

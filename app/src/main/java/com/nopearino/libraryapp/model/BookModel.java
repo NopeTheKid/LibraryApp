@@ -1,6 +1,8 @@
 package com.nopearino.libraryapp.model;
 
-public class BookModel {
+import java.io.Serializable;
+
+public class BookModel implements Serializable {
     private String title;
     private String author;
     private String isbn;

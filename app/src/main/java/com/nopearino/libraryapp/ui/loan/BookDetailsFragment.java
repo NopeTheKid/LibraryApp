@@ -159,4 +159,5 @@ public class BookDetailsFragment extends Fragment {
 
         return root;
     }
+
 }

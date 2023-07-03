@@ -15,9 +15,8 @@ public class BookModel {
         this.description = description;
     }
 
-    public BookModel(String title, int cover) {
+    public BookModel(String title) {
         this.title = title;
-        this.cover = cover;
     }
 
     public String getTitle() {

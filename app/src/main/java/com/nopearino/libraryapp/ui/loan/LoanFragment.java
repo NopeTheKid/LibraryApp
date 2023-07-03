@@ -1,6 +1,7 @@
 package com.nopearino.libraryapp.ui.loan;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,12 +10,14 @@ import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.nopearino.libraryapp.MainActivity;
 import com.nopearino.libraryapp.R;
 import com.nopearino.libraryapp.databinding.FragmentLoanBinding;
 import com.nopearino.libraryapp.model.BookModel;
@@ -37,7 +40,7 @@ public class LoanFragment extends Fragment {
         ArrayList<BookModel> bookList = new ArrayList<BookModel>();
 
         for(int i=0;i<100;i++)
-            bookList.add(new BookModel("Book "+i, R.drawable.book_example));
+            bookList.add(new BookModel("Book "+i,"Author","666133769420", R.drawable.book_example,"Description"));
 
         gridview.setAdapter(new GidViewAdapter(root.getContext(), bookList));
 
@@ -66,12 +69,19 @@ public class LoanFragment extends Fragment {
                 listitemView = LayoutInflater.from(getContext()).inflate(R.layout.fragment_book, parent, false);
             }
 
-            //CourseModel courseModel = getItem(position);
+            BookModel book = getItem(position);
             TextView courseTV = listitemView.findViewById(R.id.book_title);
             ImageView courseIV = listitemView.findViewById(R.id.book_img);
 
-            //courseTV.setText(courseModel.getCourse_name());
-            //courseIV.setImageResource(courseModel.getImgid());
+            courseTV.setText(book.getTitle());
+            courseIV.setImageResource(book.getCover());
+            listitemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(getContext(), book.getTitle(), Toast.LENGTH_SHORT).show();
+                }
+            });
+
             return listitemView;
         }
     }

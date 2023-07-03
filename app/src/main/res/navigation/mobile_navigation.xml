@@ -16,7 +16,7 @@
         android:id="@+id/navigation_add_book"
         android:name="com.nopearino.libraryapp.ui.books.fragment_AddBook"
         android:label="@string/title_add_book"
-        tools:layout="@layout/fragment__add_book"
+        tools:layout="@layout/fragment_add_book"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />

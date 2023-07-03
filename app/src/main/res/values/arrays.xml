@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="planets_array" />
+    <string-array name="categories">
+        <item></item>
+        <item>Romance</item>
+        <item>Ficção Científica</item>
+        <item>Mistério e Suspense</item>
+        <item>Fantasia</item>
+        <item>Não Ficção</item>
+        <item>Autoajuda</item>
+        <item>História</item>
+        <item>Poesia</item>
+        <item>Biografia</item>
+    </string-array>
 </resources>

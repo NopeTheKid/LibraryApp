@@ -46,7 +46,8 @@
             android:background="@color/white"
             android:foregroundGravity="center"
             android:inputType="textEmailAddress"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:hint="Utilizador"/>
     </LinearLayout>
 
     <LinearLayout
@@ -75,7 +76,8 @@
             android:background="@color/white"
             android:textColor="@color/black"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:hint="Password"/>
     </LinearLayout>
 
     <Button

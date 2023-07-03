@@ -1,165 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="0px"
     android:background="#6FA8DC"
     tools:context=".ui.books.AddBookFragment">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="-136dp">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="123dp"
             android:layout_height="148dp"
-            android:layout_marginStart="141dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="142dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/title"
             app:srcCompat="@drawable/bookamarelo"
             tools:src="@tools:sample/avatars" />
 
-        <TextView
-            android:id="@+id/textV_Categoria"
+        <LinearLayout
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:text="Categoria"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/spinner"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/EText_ISBN" />
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintBottom_toTopOf="@+id/isbn">
+            <TextView
+                android:id="@+id/TextV_Titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Titulo"
+                android:textSize="24sp" />
 
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="342dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="260dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textV_Categoria" />
+            <EditText
+                android:id="@+id/EText_Titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Título" />
+        </LinearLayout>
 
-        <EditText
-            android:id="@+id/EText_ISBN"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="5dp"
-            android:backgroundTint="#FFFFFF"
-            android:ems="10"
-            android:inputType="text"
-            android:text="ISBN"
-            app:layout_constraintBottom_toTopOf="@+id/textV_Categoria"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textV_ISBN" />
-
-        <TextView
-            android:id="@+id/TextV_Titulo"
+        <LinearLayout
+            android:id="@+id/isbn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="210dp"
-            android:layout_marginBottom="1dp"
-            android:text="Titulo"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/EText_Titulo"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintBottom_toTopOf="@+id/author">
+            <TextView
+                android:id="@+id/textV_ISBN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ISBN"
+                android:textSize="24sp"/>
+            <EditText
+                android:id="@+id/EText_ISBN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="ISBN" />
+        </LinearLayout>
 
-        <EditText
-            android:id="@+id/EText_Titulo"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="5dp"
-            android:backgroundTint="#FFFFFF"
-            android:ems="10"
-            android:inputType="text"
-            android:text="Título"
-            app:layout_constraintBottom_toTopOf="@+id/textV_Autor"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/TextV_Titulo" />
-
-        <TextView
-            android:id="@+id/textV_Autor"
+        <LinearLayout
+            android:id="@+id/author"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="2dp"
-            android:text="Autor"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/EText_Autor"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/EText_Titulo" />
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/isbn"
+            app:layout_constraintBottom_toTopOf="@+id/categories">
+            <TextView
+                android:id="@+id/textV_Autor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Autor"
+                android:textSize="24sp" />
 
-        <EditText
-            android:id="@+id/EText_Autor"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="5dp"
-            android:backgroundTint="#FFFFFF"
-            android:ems="10"
-            android:inputType="text"
-            android:text="Autor"
-            app:layout_constraintBottom_toTopOf="@+id/textV_ISBN"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textV_Autor" />
+            <EditText
+                android:id="@+id/EText_Autor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Autor" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/textV_ISBN"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/categories"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:text="ISBN"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/EText_ISBN"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/EText_Autor" />
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/author"
+            app:layout_constraintBottom_toTopOf="@+id/button">
+            <TextView
+                android:id="@+id/textV_Categoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categoria"
+                android:textSize="24sp" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/categories"/>
+        </LinearLayout>
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="158dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="159dp"
             android:text="Adicionar Livro"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinner" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+            app:layout_constraintTop_toBottomOf="@+id/categories"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

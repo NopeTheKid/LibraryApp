@@ -24,8 +24,7 @@ public class MultimediaFragment extends Fragment {
         binding = FragmentMultimediaBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textNotifications;
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
         return root;
     }
 

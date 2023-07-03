@@ -24,36 +24,6 @@
         app:layout_constraintVertical_bias="0.47" />
 
     <LinearLayout
-        android:id="@+id/categories"
-        android:layout_width="209dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="99dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="103dp"
-        android:layout_marginBottom="3dp"
-        android:foregroundGravity="center"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/isbn">
-
-        <TextView
-            android:id="@+id/textV_Categoria"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Categoria"
-            android:textSize="24sp" />
-
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:entries="@array/categories" />
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -97,25 +67,25 @@
         android:foregroundGravity="center"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/categories"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/author">
 
         <TextView
-            android:id="@+id/textV_ISBN"
+            android:id="@+id/textV_Description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ISBN"
+            android:text="Description"
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/EText_ISBN"
+            android:id="@+id/EText_Description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#FFFFFF"
             android:ems="10"
-            android:hint="ISBN"
+            android:hint="Description"
             android:inputType="text" />
     </LinearLayout>
 

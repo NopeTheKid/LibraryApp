@@ -125,20 +125,26 @@ public class BookDetailsFragment extends Fragment {
                 //verify if the inicial date is before the final date
                 String[] dateStart = binding.idTVSelectedDateStart.getText().toString().split("-");
                 String[] dateEnd = binding.idTVSelectedDateEnd.getText().toString().split("-");
-                if (Integer.parseInt(dateStart[2]) > Integer.parseInt(dateEnd[2])) {
-                    Toast toast = Toast.makeText(getContext(), "Data de Início não pode ser depois da Data de Fim", Toast.LENGTH_SHORT);
+                if(dateStart.length != 3 || dateEnd.length != 3){
+                    Toast toast = Toast.makeText(getContext(), "Selecione as datas", Toast.LENGTH_SHORT);
                     toast.show();
                     return;
-                } else if (Integer.parseInt(dateStart[2]) == Integer.parseInt(dateEnd[2])) {
-                    if (Integer.parseInt(dateStart[1]) > Integer.parseInt(dateEnd[1])) {
+                }else{
+                    if (Integer.parseInt(dateStart[2]) > Integer.parseInt(dateEnd[2])) {
                         Toast toast = Toast.makeText(getContext(), "Data de Início não pode ser depois da Data de Fim", Toast.LENGTH_SHORT);
                         toast.show();
                         return;
-                    } else if (Integer.parseInt(dateStart[1]) == Integer.parseInt(dateEnd[1])) {
-                        if (Integer.parseInt(dateStart[0]) > Integer.parseInt(dateEnd[0])) {
+                    } else if (Integer.parseInt(dateStart[2]) == Integer.parseInt(dateEnd[2])) {
+                        if (Integer.parseInt(dateStart[1]) > Integer.parseInt(dateEnd[1])) {
                             Toast toast = Toast.makeText(getContext(), "Data de Início não pode ser depois da Data de Fim", Toast.LENGTH_SHORT);
                             toast.show();
                             return;
+                        } else if (Integer.parseInt(dateStart[1]) == Integer.parseInt(dateEnd[1])) {
+                            if (Integer.parseInt(dateStart[0]) > Integer.parseInt(dateEnd[0])) {
+                                Toast toast = Toast.makeText(getContext(), "Data de Início não pode ser depois da Data de Fim", Toast.LENGTH_SHORT);
+                                toast.show();
+                                return;
+                            }
                         }
                     }
                 }

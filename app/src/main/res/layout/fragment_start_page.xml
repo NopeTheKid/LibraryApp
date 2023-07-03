@@ -12,37 +12,33 @@
         android:layout_width="180dp"
         android:layout_height="236dp"
         android:src="@drawable/startpagebooks"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button_login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.519" />
+        app:layout_constraintTop_toBottomOf="@id/TView_Inicio"/>
 
     <TextView
         android:id="@+id/TView_Inicio"
         android:layout_width="213dp"
         android:layout_height="172dp"
-        android:layout_marginStart="99dp"
-        android:layout_marginBottom="30dp"
         android:text="Biblioteca Escola Santiago Maior"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
     <Button
         android:id="@+id/button_login"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="80dp"
         android:backgroundTint="#FF9900"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        android:text="Login"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,7 @@
     android:layout_gravity="center"
     android:layout_margin="100dp"
     app:cardCornerRadius="5dp"
+    app:cardBackgroundColor="#486d8f"
     app:cardElevation="5dp">
 
     <LinearLayout
@@ -32,6 +33,7 @@
             android:layout_margin="5sp"
             android:gravity="center"
             android:hint="@string/book_title_example"
+            android:textColor="@color/white"
             android:textAlignment="center" />
     </LinearLayout>
 

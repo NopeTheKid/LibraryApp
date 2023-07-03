@@ -27,9 +27,4 @@
         android:label="@string/title_multimedia"
         tools:layout="@layout/fragment_multimedia" />
 
-    <fragment
-        android:id="@+id/book_loan"
-        android:name="com.nopearino.libraryapp.ui.loan.BookDetailsFragment"
-        android:label="Book Details"
-        tools:layout="@layout/fragment_multimedia" />
 </navigation>

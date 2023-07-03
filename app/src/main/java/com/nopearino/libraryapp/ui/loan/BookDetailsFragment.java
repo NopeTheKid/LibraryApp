@@ -116,6 +116,33 @@ public class BookDetailsFragment extends Fragment {
         binding.btnRequisitar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //verify if the dates are valid
+                if (binding.idTVSelectedDateStart.getText().toString().equals("Data de Início") || binding.idTVSelectedDateEnd.getText().toString().equals("Data de Fim")) {
+                    Toast toast = Toast.makeText(getContext(), "Selecione as datas", Toast.LENGTH_SHORT);
+                    toast.show();
+                    return;
+                }
+                //verify if the inicial date is before the final date
+                String[] dateStart = binding.idTVSelectedDateStart.getText().toString().split("-");
+                String[] dateEnd = binding.idTVSelectedDateEnd.getText().toString().split("-");
+                if (Integer.parseInt(dateStart[2]) > Integer.parseInt(dateEnd[2])) {
+                    Toast toast = Toast.makeText(getContext(), "Data de Início não pode ser depois da Data de Fim", Toast.LENGTH_SHORT);
+                    toast.show();
+                    return;
+                } else if (Integer.parseInt(dateStart[2]) == Integer.parseInt(dateEnd[2])) {
+                    if (Integer.parseInt(dateStart[1]) > Integer.parseInt(dateEnd[1])) {
+                        Toast toast = Toast.makeText(getContext(), "Data de Início não pode ser depois da Data de Fim", Toast.LENGTH_SHORT);
+                        toast.show();
+                        return;
+                    } else if (Integer.parseInt(dateStart[1]) == Integer.parseInt(dateEnd[1])) {
+                        if (Integer.parseInt(dateStart[0]) > Integer.parseInt(dateEnd[0])) {
+                            Toast toast = Toast.makeText(getContext(), "Data de Início não pode ser depois da Data de Fim", Toast.LENGTH_SHORT);
+                            toast.show();
+                            return;
+                        }
+                    }
+                }
+
                 Toast toast = Toast.makeText(getContext(), "Requisitado", Toast.LENGTH_SHORT);
                 toast.show();
 

@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.nopearino.libraryapp.ui.loan.LoanFragment"
+        android:name="com.nopearino.libraryapp.fragment_tops"
         android:label="@string/title_loan"
-        tools:layout="@layout/fragment_loan" />
+        tools:layout="@layout/fragment_tops" />
 
 
     <fragment

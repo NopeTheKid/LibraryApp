@@ -9,9 +9,10 @@
 
     <EditText
         android:id="@+id/searchbar"
-        android:layout_width="316dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="10dp"
+        android:layout_width="256dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/book_search_hint"
         android:inputType="text"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -38,12 +39,22 @@
         android:layout_width="80dp"
         android:layout_height="37dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:isScrollContainer="false"
         android:pointerIcon="none"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/searchbar"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:src="@drawable/home_2544087_2"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="3dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

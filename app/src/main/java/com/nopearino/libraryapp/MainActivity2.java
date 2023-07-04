@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +16,7 @@ public class MainActivity2 extends AppCompatActivity {
     private Button btn_login;
     private EditText username;
     private EditText passwd;
+    private ImageButton btn_home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +38,9 @@ public class MainActivity2 extends AppCompatActivity {
                 startActivity(intent);
                 //onDestroy();
             }
+
         });
+        
     }
 
     @Override

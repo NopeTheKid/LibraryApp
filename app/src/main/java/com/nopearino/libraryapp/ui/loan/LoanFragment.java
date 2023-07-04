@@ -28,6 +28,11 @@ public class LoanFragment extends Fragment {
     private FragmentLoanBinding binding;
     private Button btn_home;
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         LoanViewModel homeViewModel =

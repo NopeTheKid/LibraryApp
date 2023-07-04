@@ -5,42 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#6FA8DC"
-    tools:context=".fragment_tops">
+    tools:context=".ui.loan.TopsFragment">
 
     <GridView
         android:id="@+id/gridview1"
-        android:layout_width="404dp"
-        android:layout_height="195dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
         android:columnWidth="90dp"
-        android:gravity="left"
         android:horizontalSpacing="10sp"
         android:numColumns="3"
         android:verticalSpacing="1sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintBottom_toTopOf="@+id/button_req"/>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="39dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="52dp"
-
-        android:layout_marginEnd="77dp"
         android:gravity="center"
         android:text="Adicionados Recentemente"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/gridview1"
         app:layout_constraintTop_toBottomOf="@+id/gridview2" />
 
     <GridView
         android:id="@+id/gridview2"
-        android:layout_width="397dp"
-        android:layout_height="199dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
         android:columnWidth="90dp"
         android:gravity="left"
         android:horizontalSpacing="10sp"
@@ -48,32 +45,32 @@
         android:verticalSpacing="1sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="39dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="120dp"
         android:gravity="center"
         android:text="Mais Requesitados"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/gridview2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 
     <Button
         android:id="@+id/button_req"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="60dp"
         android:text="Requisitar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridview1" />
+        app:layout_constraintTop_toBottomOf="@+id/gridview1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <EditText
         android:id="@+id/editTextText"
@@ -87,6 +84,7 @@
         android:text="Pesquisar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

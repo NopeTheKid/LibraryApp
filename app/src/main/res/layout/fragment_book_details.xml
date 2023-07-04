@@ -31,12 +31,12 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
         app:layout_constraintBottom_toTopOf="@+id/isbn">
+
         <TextView
             android:id="@+id/TView_BookName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Book Name"
-            android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold" />
         <TextView
@@ -56,13 +56,13 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintBottom_toTopOf="@+id/editor">
+
         <TextView
             android:id="@+id/TView_ISBN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="ISBN"
-            android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold" />
         <TextView
@@ -81,12 +81,12 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/isbn"
         app:layout_constraintBottom_toTopOf="@+id/dates">
+
         <TextView
             android:id="@+id/TViewAuthor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Autor"
-            android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold" />
         <TextView
@@ -113,15 +113,15 @@
             android:orientation="vertical"
             android:layout_marginRight="5dp"
             android:gravity="center">
+
             <TextView
                 android:id="@+id/idTVSelectedDateStart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="Start Date"
+                android:text="Data Início"
                 android:textAlignment="center"
-                android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -129,7 +129,7 @@
                 android:id="@+id/idBtnPickDateStart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pick Start Date"
+                android:text="Escolher Data Início"
                 android:textAllCaps="false" />
         </LinearLayout>
         <LinearLayout
@@ -138,15 +138,15 @@
         android:orientation="vertical"
         android:layout_marginLeft="5dp"
         android:gravity="center">
+
             <TextView
                 android:id="@+id/idTVSelectedDateEnd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="End Date"
+                android:text="Data Fim"
                 android:textAlignment="center"
-                android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -154,7 +154,7 @@
                 android:id="@+id/idBtnPickDateEnd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pick End Date"
+                android:text="Escolher Data Fim"
                 android:textAllCaps="false" />
         </LinearLayout>
     </LinearLayout>

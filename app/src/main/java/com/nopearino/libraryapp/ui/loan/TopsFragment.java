@@ -42,7 +42,7 @@ public class TopsFragment extends Fragment {
         binding.buttonReq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                FragmentTransaction ft = getParentFragmentManager().beginTransaction();
                 ft.add(R.id.nav_host_fragment_activity_main, new LoanFragment(), "LoanFragment");
                 ft.addToBackStack("TopsFragment");
                 ft.commit();
@@ -78,7 +78,7 @@ public class TopsFragment extends Fragment {
             listitemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    ft = getFragmentManager().beginTransaction();
+                    ft = getParentFragmentManager().beginTransaction();
                     BookDetailsFragment bookDetailsFragment = new BookDetailsFragment();
                     Bundle bundle = new Bundle();
                     bundle.putSerializable("book", book);

@@ -88,7 +88,7 @@ public class LoanFragment extends Fragment {
             listitemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    ft = getFragmentManager().beginTransaction();
+                    ft = getParentFragmentManager().beginTransaction();
                     BookDetailsFragment bookDetailsFragment = new BookDetailsFragment();
                     Bundle bundle = new Bundle();
                     bundle.putSerializable("book", book);

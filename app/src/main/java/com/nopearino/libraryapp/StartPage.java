@@ -1,10 +1,13 @@
 package com.nopearino.libraryapp;
 
+import android.app.UiModeManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+
 import com.nopearino.libraryapp.databinding.FragmentStartPageBinding;
 
 public class StartPage extends AppCompatActivity {
@@ -16,6 +19,11 @@ public class StartPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = FragmentStartPageBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        // Set Night mode
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        UiModeManager uiManager = (UiModeManager) getSystemService(UI_MODE_SERVICE);
+        uiManager.setNightMode(UiModeManager.MODE_NIGHT_YES);
 
         this.btn_login = findViewById(R.id.button_login);
 

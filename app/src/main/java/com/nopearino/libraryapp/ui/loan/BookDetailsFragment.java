@@ -152,7 +152,7 @@ public class BookDetailsFragment extends Fragment {
                 Toast toast = Toast.makeText(getContext(), "Requisitado", Toast.LENGTH_SHORT);
                 toast.show();
 
-                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                FragmentTransaction ft = getParentFragmentManager().beginTransaction();
                 ft.remove(bookDetailsFragment).commit();
             }
         });
